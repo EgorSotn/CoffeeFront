@@ -1,14 +1,14 @@
 body{margin-top:20px;}
 .counter {
   background: #100028;
-  height: 840px;
-  padding-top: 10px;
+  height: 100%;
+  padding-top: 30px;
   overflow: hidden;
 }
 
-.counter__content {
-  padding: 0px 50px;
-}
+/*.counter__content {*/
+/*  padding: 0px 0px;*/
+/*}*/
 
 .counter__item {
   background: #1a083d;
