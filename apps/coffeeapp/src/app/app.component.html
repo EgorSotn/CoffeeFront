@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar bg-dark">
+  <a class="navbar-brand" style="color:white;">Coffee</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarColor02">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a (click)="onOpenModal(null, 'add')" class="nav-link">Add Coffee <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="counter"  id="main-container">
+  <p class="mt-2 text-center"><span class="h2 me-2">What's the coffee?</span>
+  <p class="text-muted pb-2 text-center">We mix the ingredients and get a drink</p>
+
+  <div class="row gap-4" >
+    <app-ingredients [ingredients]="ingredients" (searchEvent)="searchCoffeeService($event)"></app-ingredients>
+    <div class="col float-md-right ">
+      <app-edit-coffee [searchCoffee]="searchCoffee"></app-edit-coffee>
+    </div>
+
+  </div>
+</div>
+
+<app-add-coffee (outEnter)="addCoffee($event)"></app-add-coffee>
+
+

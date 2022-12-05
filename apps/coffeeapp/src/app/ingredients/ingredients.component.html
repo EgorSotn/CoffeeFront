@@ -1,0 +1,12 @@
+<div class="col float-md-left ml-4">
+  <form  class="col-auto" [formGroup]="form" (ngSubmit)="submit()" novalidate>
+    <ul class="list-group" *ngFor="let ingredient of ingredients; let i=index">
+      <li class="list-group">
+        <input class="form-check-input"  type="checkbox" formArrayName="selectedIngredients"
+               [value]="ingredient" (change)="onCheckboxChange($event)" id="{{ingredient}}" />
+        <label class="form-check-label" style="color:white" for="{{ingredient}}">{{ingredient}}</label>
+      </li>
+    </ul>
+    <button class="mt-3" type="submit">Submit</button>
+  </form>
+</div>

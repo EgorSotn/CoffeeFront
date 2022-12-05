@@ -1,0 +1,14 @@
+
+<div class="col float-md-right " *ngIf="searchCoffee.length>0">
+  <ul class="list-group" *ngFor="let coffee of searchCoffee; let i=index">
+    <li class="list-group">
+      <img class="rounded float-right" [src]="coffee.image" height="200px" width="200px">
+      <label class="form-check-label" style="color:white" >{{coffee.title}}</label>
+      <label class="form-check-label" style="color:white" >{{coffee.description}}</label>
+    </li>
+  </ul>
+</div>
+
+
+
+

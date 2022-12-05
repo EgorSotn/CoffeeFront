@@ -1,0 +1,40 @@
+<div class="modal fade" id="addCoffeeModal" tabindex="-1" role="dialog" aria-labelledby="addCoffeeModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="addCoffeeModalLabel">Add Coffee</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" >
+        <form #addForm="ngForm" (ngSubmit)="onAddCoffee(addForm)">
+          <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" ngModel name="title" class="form-control" id="title" placeholder="title" required>
+          </div>
+          <div class="form-group">
+            <label for="description">Description</label>
+            <input type="text" ngModel name="description" class="form-control" id="description" placeholder="description" required>
+          </div>
+          <div class="form-group">
+            <label for="ingredients">Ingredients</label>
+            <input type="text" ngModel name="ingredients" class="form-control" id="ingredients" placeholder="Ingredients" required>
+          </div>
+          <div class="form-group">
+            <label for="image">Image</label>
+            <input type="text" ngModel name="image" class="form-control" id="image" placeholder="Imager" required>
+          </div>
+          <div class="form-group">
+            <label for="id">Id</label>
+            <input type="text" ngModel name="id" class="form-control" id="id" placeholder="Id" required>
+          </div>
+          <div class="modal-footer">
+            <button type="button" id="add-coffee-form" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button [disabled]="addForm.invalid"  type="submit" class="btn btn-primary" >Save changes</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

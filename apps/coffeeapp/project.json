@@ -1,0 +1,94 @@
+{
+  "name": "coffeeapp",
+  "projectType": "application",
+  "generators": {},
+  "sourceRoot": "apps/coffeeapp/src",
+  "prefix": "app",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "options": {
+        "outputPath": "dist/apps/coffeeapp",
+        "index": "apps/coffeeapp/src/index.html",
+        "main": "apps/coffeeapp/src/main.ts",
+        "polyfills": "apps/coffeeapp/src/polyfills.ts",
+        "tsConfig": "apps/coffeeapp/tsconfig.app.json",
+        "assets": [
+          "apps/coffeeapp/src/favicon.ico",
+          "apps/coffeeapp/src/assets"
+        ],
+        "styles": [
+          "apps/coffeeapp/src/styles.css"
+        ],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/coffeeapp/src/environments/environment.ts",
+              "with": "apps/coffeeapp/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "coffeeapp:build:production"
+        },
+        "development": {
+          "browserTarget": "coffeeapp:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "coffeeapp:build"
+      }
+    },
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "apps/coffeeapp/src/test.ts",
+        "polyfills": "apps/coffeeapp/src/polyfills.ts",
+        "tsConfig": "apps/coffeeapp/tsconfig.spec.json",
+        "karmaConfig": "apps/coffeeapp/karma.conf.js",
+        "assets": [
+          "apps/coffeeapp/src/favicon.ico",
+          "apps/coffeeapp/src/assets"
+        ],
+        "styles": [
+          "apps/coffeeapp/src/styles.css"
+        ],
+        "scripts": []
+      }
+    }
+  }
+}
