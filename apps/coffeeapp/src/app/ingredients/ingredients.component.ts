@@ -1,7 +1,6 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {FormArray, FormBuilder, FormControl, FormGroup} from "@angular/forms";
-import {CoffeeService} from "../coffee.service";
-import {Coffee} from "../coffee";
+;
 
 @Component({
   selector: 'app-ingredients',

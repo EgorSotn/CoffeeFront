@@ -36,21 +36,21 @@ export class Util{
     });
     return coffee;
   }
-  public getAllCoffee():Coffee[]{
-    return this.coffees;
-  }
-  public deleteCoffeeById(id:Number) {
-    this.coffees.filter(value => value.id != id);
-  }
-  public getCoffeeById(id:Number):Coffee | null {
-      // @ts-ignore
-    this.coffees.forEach(value => {
-        if(value.id == id){
-          return value;
-        }
-      })
-    return null;
-  }
+  // public getAllCoffee():Coffee[]{
+  //   return this.coffees;
+  // }
+  // public deleteCoffeeById(id:Number) {
+  //   this.coffees.filter(value => value.id != id);
+  // }
+  // public getCoffeeById(id:Number):Coffee | null {
+  //     // @ts-ignore
+  //   this.coffees.forEach(value => {
+  //       if(value.id == id){
+  //         return value;
+  //       }
+  //     })
+  //   return null;
+  // }
   public getCoffeeByIngredients(ings:String[]):Coffee[]{
     let count  = 0;
     let buff: Coffee[] = [];

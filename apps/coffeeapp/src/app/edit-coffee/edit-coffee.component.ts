@@ -12,6 +12,8 @@ import {FormArray, FormBuilder, FormControl, FormGroup} from "@angular/forms";
 export class EditCoffeeComponent {
   // @ts-ignore
   @Input() searchCoffee: Coffee[];
-
+  constructor() {
+    this.searchCoffee = [];
+  }
 
 }

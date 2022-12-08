@@ -1,6 +1,5 @@
 import {Observable} from "rxjs";
 import {Injectable} from "@angular/core";
-import {HttpClient, HttpHandler} from "@angular/common/http";
 import {environment} from "../environments/environment";
 import {Coffee} from "./coffee";
 import {Util} from "./util";
@@ -12,14 +11,11 @@ import {Util} from "./util";
 })
 export class CoffeeService{
   private apiServerUrl = environment.apiBaseUrl;
-  // @ts-ignore
-  // private util:Util;
 
-  constructor(private util: Util, private http: HttpClient) {}
 
-  public getCoffee():Coffee[] {
-    return this.util.getAllCoffee();
-  }
+  constructor(private util: Util) {}
+
+
   public getCoffeeByIngredients(ingredients:String[]){
     return this.util.getCoffeeByIngredients(ingredients);
   }
@@ -35,11 +31,6 @@ export class CoffeeService{
   //   return null;
   // }
 
-  public deleteCoffee(coffeeId: Number):void{
-    return this.util.deleteCoffeeById(coffeeId);
-  }
-  public getCoffeeById(coffeeId: Number):Coffee | null{
-    return this.util.getCoffeeById(coffeeId);
-  }
+
 
 }

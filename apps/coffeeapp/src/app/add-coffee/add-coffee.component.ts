@@ -1,8 +1,7 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {NgForm} from "@angular/forms";
 import {Coffee} from "../coffee";
-import {CoffeeService} from "../coffee.service";
-import {AppComponent} from "../app.component";
+
 
 @Component({
   selector: 'app-add-coffee',
