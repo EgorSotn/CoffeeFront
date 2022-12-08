@@ -43,7 +43,6 @@ describe('CoffeeService', () => {
     // @ts-ignore
     expect(coffeeService.addCoffee(jasmine.anything())).toBe(coffee);
   });
-
   // it('getAllIngredient should add coffee and return', () => {
   //   // @ts-ignore
   //   let coffee: Coffee;

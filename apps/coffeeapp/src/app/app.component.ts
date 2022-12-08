@@ -62,6 +62,7 @@ export class AppComponent implements OnInit{
 
   ngOnInit(): void {
    this.getIngredients();
+   this.searchCoffee = this.coffeeService.getAllCoffee();
   }
 
 }

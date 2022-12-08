@@ -25,6 +25,9 @@ export class CoffeeService{
   public getAllIngredient(): String[]{
     return Array.from(this.util.getAllIngredient());
   }
+  public getAllCoffee():Coffee[]{
+    return this.util.coffees;
+  }
   // public updateCoffee(coffee: Coffee):Observable<Coffee>{
   //   // this.http.put<Coffee>(`${this.apiServerUrl}/api/book/update`,book);
   //   // @ts-ignore
